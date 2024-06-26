@@ -6,9 +6,7 @@ import { InputField } from "@/components/form/input-field";
 export default function Home() {
   return (
     <div>
-      <Button variant="solid" type="button">
-        Click me
-      </Button>
+      <Button>Click me</Button>
       <br />
       <InputField label="Name" />
       <br />

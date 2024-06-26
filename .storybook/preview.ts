@@ -1,19 +1,16 @@
-import type { Preview } from "@storybook/react";
+// .storybook/preview.js
 
-const theme = require("@/config/theme");
+const theme = require("../src/config/theme");
 
-const preview: Preview = {
-  parameters: {
-    actions: { argTypesRegex: "^on[A-Z].*" },
-    controls: {
-      matchers: {
-        color: /(background|color)$/i,
-        date: /Date$/i,
-      },
-      expanded: true,
+export const parameters = {
+  actions: { argTypesRegex: "^on[A-Z].*" },
+  controls: {
+    matchers: {
+      color: /(background|color)$/i,
+      date: /Date$/i,
     },
-    chakra: { theme },
+  },
+  chakra: {
+    theme,
   },
 };
-
-export default preview;
